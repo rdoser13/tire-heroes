@@ -95,23 +95,32 @@
       left: 0;
       right: 0;
       z-index: 1000;
-      background: var(--red);
-      padding: 12px 20px;
+      background: var(--dark);
+      padding: 14px 16px;
       text-align: center;
-      box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 -4px 24px rgba(0,0,0,0.35);
     }
     .sticky-cta a {
       color: var(--white);
       font-family: 'Oswald', sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
       text-decoration: none;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
+      background: var(--red);
+      padding: 16px 24px;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(196, 30, 42, 0.5);
+      animation: pulseBtn 2s ease-in-out infinite;
+    }
+    @keyframes pulseBtn {
+      0%, 100% { box-shadow: 0 4px 16px rgba(196, 30, 42, 0.5); }
+      50% { box-shadow: 0 4px 28px rgba(196, 30, 42, 0.8); }
     }
 
     /* ── TOP BAR ── */
@@ -581,13 +590,21 @@
       .hero-ctas { flex-direction: column; }
       .btn-call { width: 100%; justify-content: center; }
       .btn-secondary { width: 100%; justify-content: center; }
-      .proof-bar .container { flex-direction: column; gap: 12px; }
+      .proof-bar { padding: 20px 0; }
+      .proof-bar .container { flex-direction: column; gap: 14px; align-items: center; }
+      .proof-item { justify-content: center; text-align: center; font-size: 0.9rem; }
       .section-title { font-size: 1.7rem; }
       .nav-phone { font-size: 1.1rem; }
       .nav-logo { height: 40px; }
       .sticky-cta { display: block; }
-      body { padding-bottom: 60px; }
+      body { padding-bottom: 80px; }
       .bottom-cta .btn-call { font-size: 1.15rem; padding: 16px 28px; }
+      .reviews-grid { gap: 16px; }
+      .review-card { padding: 22px; }
+      .area-tags { gap: 8px; }
+      .area-tag { padding: 6px 14px; font-size: 0.85rem; }
+      .how-it-works, .services, .why, .reviews { padding: 50px 0; }
+      .fleet { padding: 40px 0; }
     }
   </style>
 </head>
@@ -596,8 +613,8 @@
   <!-- Sticky Mobile CTA -->
   <div class="sticky-cta">
     <a href="tel:5156906621">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
-      Call Now: (515) 690-6621
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+      <span>Tap to Call (515) 690-6621<small style="display:block;font-size:0.65rem;opacity:0.8;letter-spacing:0.04em;font-weight:500;margin-top:2px;">Same-Day Service Available</small></span>
     </a>
   </div>
 
