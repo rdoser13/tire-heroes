@@ -269,13 +269,31 @@
       border-radius: 4px;
     }
 
-    /* ── SOCIAL PROOF BAR ── */
+    /* ── TRUST BADGES BAR ── */
     .proof-bar {
-      background: var(--light);
-      padding: 24px 0;
-      border-bottom: 1px solid #e0e0e0;
+      background: var(--white);
+      padding: 32px 0 28px;
+      border-bottom: 1px solid #e8e8e8;
     }
-    .proof-bar .container {
+    .trust-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .trust-badge img {
+      height: 70px;
+      width: auto;
+      object-fit: contain;
+    }
+    .proof-stats {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -591,7 +609,9 @@
       .btn-call { width: 100%; justify-content: center; }
       .btn-secondary { width: 100%; justify-content: center; }
       .proof-bar { padding: 20px 0; }
-      .proof-bar .container { flex-direction: column; gap: 14px; align-items: center; }
+      .trust-logos { gap: 24px; margin-bottom: 18px; }
+      .trust-badge img { height: 50px; }
+      .proof-stats { flex-direction: column; gap: 10px; align-items: center; }
       .proof-item { justify-content: center; text-align: center; font-size: 0.9rem; }
       .section-title { font-size: 1.7rem; }
       .nav-phone { font-size: 1.1rem; }
@@ -669,18 +689,31 @@
     </div>
   </section>
 
-  <!-- Social Proof Bar -->
+  <!-- Trust Badges Bar -->
   <div class="proof-bar">
     <div class="container">
-      <div class="proof-item">
-        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <strong>4.8 Stars</strong> &mdash; 143+ Google Reviews
+      <div class="trust-logos">
+        <div class="trust-badge">
+          <img src="assets/Google Reviews Logo.png" alt="Google 5-Star Reviews">
+        </div>
+        <div class="trust-badge">
+          <img src="assets/BBB Logo.png" alt="BBB Accredited Business">
+        </div>
+        <div class="trust-badge">
+          <img src="assets/Veteran Owned Business Logo.png" alt="Veteran Owned Business">
+        </div>
       </div>
-      <div class="proof-item">
-        <strong>15+ Tire Brands</strong> &mdash; Michelin, Goodyear, Bridgestone &amp; More
-      </div>
-      <div class="proof-item">
-        <strong>Since 2020</strong> &mdash; Serving Central Iowa
+      <div class="proof-stats">
+        <div class="proof-item">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <strong>4.8 Stars</strong> &mdash; 143+ Google Reviews
+        </div>
+        <div class="proof-item">
+          <strong>15+ Tire Brands</strong> &mdash; Michelin, Goodyear, Bridgestone &amp; More
+        </div>
+        <div class="proof-item">
+          <strong>Since 2020</strong> &mdash; Serving Central Iowa
+        </div>
       </div>
     </div>
   </div>
